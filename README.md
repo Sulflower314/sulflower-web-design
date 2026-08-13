@@ -37,6 +37,7 @@ sulflower-web-design/
 ├── CONTRIBUTING.md
 ├── CODE_OF_CONDUCT.md
 ├── SECURITY.md
+├── install.ps1
 └── skill/
     └── sulflower-web-design/
         ├── SKILL.md
@@ -49,7 +50,29 @@ sulflower-web-design/
 
 ## 安装
 
-将完整的 `skill/sulflower-web-design/` 目录复制到代理能够发现 Skill 的位置。
+### 一键安装（Windows PowerShell）
+
+确认信任本仓库后，可直接执行下面这一行。脚本会下载 GitHub 上的最新版本，并安装到当前用户的 Codex Skill 目录：
+
+```powershell
+irm https://raw.githubusercontent.com/Sulflower314/sulflower-web-design/main/install.ps1 | iex
+```
+
+安装完成后，重启 Codex 或重新加载 Skills，再使用 `$sulflower-web-design`。
+
+如果目标目录已经存在，安装会覆盖同名 Skill 文件；需要保留本地修改时，请先备份该目录。
+
+如果不希望直接执行远程脚本，可以先下载、检查内容，再运行：
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/Sulflower314/sulflower-web-design/main/install.ps1 -OutFile .\install.ps1
+Get-Content .\install.ps1
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+### 手动安装
+
+如果已经下载或克隆了本仓库，将完整的 `skill/sulflower-web-design/` 目录复制到代理能够发现 Skill 的位置。下面的命令必须在仓库根目录执行，它不是从 GitHub 直接下载的一键安装：
 
 ### Codex 用户级安装
 

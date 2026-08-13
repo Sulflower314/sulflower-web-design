@@ -16,7 +16,29 @@ An open-source frontend-design skill for AI coding agents. It helps agents creat
 
 ## Install
 
-Copy the complete `skill/sulflower-web-design/` directory to a skill path supported by your agent.
+### One-command install (Windows PowerShell)
+
+After reviewing and trusting this repository, run the following command. It downloads the latest version from GitHub and installs it into the current user's Codex skill directory:
+
+```powershell
+irm https://raw.githubusercontent.com/Sulflower314/sulflower-web-design/main/install.ps1 | iex
+```
+
+Restart Codex or reload your skills before using `$sulflower-web-design`.
+
+If the target directory already exists, installation overwrites files with the same names. Back up local changes first if needed.
+
+If you prefer to inspect the script first, download it and run it locally:
+
+```powershell
+Invoke-WebRequest https://raw.githubusercontent.com/Sulflower314/sulflower-web-design/main/install.ps1 -OutFile .\install.ps1
+Get-Content .\install.ps1
+powershell -ExecutionPolicy Bypass -File .\install.ps1
+```
+
+### Manual installation
+
+If you already downloaded or cloned this repository, copy the complete `skill/sulflower-web-design/` directory to a skill path supported by your agent. The commands below must run from the repository root; they do not download the skill directly from GitHub.
 
 For a Codex user-level installation on macOS or Linux:
 
