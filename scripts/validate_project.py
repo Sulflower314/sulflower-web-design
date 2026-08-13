@@ -101,6 +101,8 @@ def validate_publish_safety() -> None:
     private_key = re.compile(r"BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY")
     violations: list[str] = []
     for path in ROOT.rglob("*"):
+        if ".git" in path.parts:
+            continue
         if not path.is_file() or path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".gif", ".zip"}:
             continue
         text = path.read_text(encoding="utf-8", errors="ignore")
