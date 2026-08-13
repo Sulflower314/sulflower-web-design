@@ -1,0 +1,4 @@
+interface:
+  display_name: "Sulflower Web Design"
+  short_description: "Polished, brand-aware web design and frontend implementation"
+  default_prompt: "Use $sulflower-web-design to design and build a polished browser-based interface."

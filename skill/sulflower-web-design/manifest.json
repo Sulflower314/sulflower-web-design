@@ -1,0 +1,15 @@
+{
+  "name": "sulflower-web-design",
+  "version": "2.0.0",
+  "author": "Sulflower",
+  "license": "MIT",
+  "category": "Design / Frontend",
+  "description": "Design, build, improve, reconstruct, and critique polished, brand-aware browser interfaces while preserving repository-native frontend conventions.",
+  "compat": [
+    "codex-cli",
+    "claude-code",
+    "cursor",
+    "gemini-cli",
+    "opencode"
+  ]
+}

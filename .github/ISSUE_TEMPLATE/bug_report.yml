@@ -1,0 +1,36 @@
+name: Bug report
+description: Report incorrect, unsafe, or inconsistent skill behavior
+title: "[Bug]: "
+labels:
+  - bug
+body:
+  - type: markdown
+    attributes:
+      value: "Do not include secrets, private URLs, personal paths, or confidential project data."
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What behavior did you observe?
+    validations:
+      required: true
+  - type: textarea
+    id: prompt
+    attributes:
+      label: Minimal sanitized prompt
+      description: Provide a minimal prompt that reproduces the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: "2.0.0"
+    validations:
+      required: true
